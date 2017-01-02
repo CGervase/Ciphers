@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Ciphers</title>
+  
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <body>
+  <h1>CIPHERTEXT</h1>
+  <div class="container-fluid" id="main">
+    <textarea rows="3" cols="50" id="input" style="text-transform: uppercase" placeholder="Input"></textarea>
+    <textarea rows="3" cols="50" id="output" readonly="readonly" placeholder="OUTPUT"></textarea>
+    <br>
+    <div class="btn-group" id="cipher-btns" data-toggle="buttons">
+      <label class="btn btn-default active btn-ciph" id="caesar">
+        <input type="radio" name="options" autocomplete="off" checked> Caesar
+      </label>
+      <label class="btn btn-default btn-ciph" id="atbash">
+        <input type="radio" name="options" autocomplete="off"> Atbash
+      </label>
+      <label class="btn btn-default btn-ciph" id="affine">
+        <input type="radio" name="options" autocomplete="off"> Affine
+      </label>
+      <label class="btn btn-default btn-ciph" id="vigenere">
+        <input type="radio" name="options" autocomplete="off"> Vigenère
+      </label>
+    </div>
+    <button type="button" class="btn btn-default" id="encrypt">Encrypt</button>
+    <button type="button" class="btn btn-default" id="decrypt">Decrypt</button>
+    <div id="data">
+      <label for="shift">Right shift: </label>
+      <input type="text" id="shift" size="5">
+    </div>
+      <footer>Created by Charles Gervase.</footer>
+  </div>
+  
+
+</body>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>

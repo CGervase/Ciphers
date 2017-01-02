@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Anonymous+Pro');
+
+body {
+  font-family: Anonymous Pro;
+  background-color: #222;
+  color: #AF4;
+}
+
+h1 {
+  margin-left: 10%;
+}
+
+textarea {
+  background-color: #555;
+}
+
+input {
+  background-color: #555;
+  border: solid #999 1px;
+}
+
+.btn, .btn:hover {
+  background-color: #555 !important;
+  color: #AF4 !important;
+}
+
+.active {
+  background-color: #777 !important;
+  color: #AF4 !important;
+}
+
+#encrypt {
+  margin-left: 10%;
+}
+
+#data {
+  margin-top: 5px;
+}
+
+#shift, #key {
+  margin-right: 10px;
+}
+
+footer {
+  margin-top: 5%;
+}

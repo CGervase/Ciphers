@@ -1,5 +1,3 @@
-//to do: document
-
 function cipher() {
   //changes the inputs under the buttons based on the selected cipher
   function changeHTML(type) {
@@ -25,7 +23,7 @@ function cipher() {
   function caesar(p) {
     var shift = $("#shift").val();    //how much to shift the letters by
     if (shift === "" || isNaN(shift) || shift != parseInt(shift)) {
-      alert("Please enter an integer to shift by.")
+      alert("Please enter an integer to shift by.");
       return false;
     } else
       shift = parseInt(shift) * p;    //if p = -1, reverses the shift for decryption
@@ -64,10 +62,13 @@ function cipher() {
     var key = $("#key").val();      //multiplicative key, "a" in the function
     var shift = $("#shift").val();  //how much to shift the letters by, "b" in the function
     if (key === "" || isNaN(key) || key != parseInt(key)) {
-      alert("Please enter an integer for the key.")
+      alert("Please enter an integer for the key.");
+      return false;
+    } else if (gcd(parseInt(key), 26) != 1) {
+      alert("Key must be coprime with 26.");
       return false;
     } else if (shift === "" || isNaN(shift) || shift != parseInt(shift)) {
-      alert("Please enter an integer to shift by.")
+      alert("Please enter an integer to shift by.");
       return false;
     } else {
       key = parseInt(key);
@@ -95,7 +96,7 @@ function cipher() {
   function vigenere(p) {
     var key = $("#key").val().toUpperCase();
     if (key === "" || !/^[a-zA-Z]*$/g.test(key)) {      //only letters allowed for key
-      alert("Please enter a valid key (only letters).")
+      alert("Please enter a valid key (only letters).");
       return false;
     }
 
@@ -115,6 +116,17 @@ function cipher() {
       letters[i] = char;
     }
     $("#output").val(String.fromCharCode.apply(null, letters));
+  }
+  
+  //greatest common divisor, using Euclid's algorithm
+  function gcd(x, y) {
+    var z;
+    while (y != 0) {
+      z = x;
+      x = y;
+      y = z.mod(y);
+    }
+    return x;
   }
 
   //to account for negative number modulo javascript bug
